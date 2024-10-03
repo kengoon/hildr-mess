@@ -14,7 +14,7 @@ jobs:
       - name: Set up GraalVM Java 21
         uses: graalvm/setup-graalvm@v1
         with:
-          graalvm-version: '21.0.0' # Adjust for your GraalVM version
+          version: '21.0.0' # Adjust for your GraalVM version
           java-version: '21'
 
       - name: Cache Gradle packages
@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dependency-check-report
-          path: dependency-check-report/dependency-check-report.html
+          path: build/reports/dependency-check-report/dependency-check-report.html
 
       - name: Fail if high vulnerabilities found
         if: failure()
