@@ -14,7 +14,6 @@ jobs:
       - name: Set up GraalVM Java 21
         uses: graalvm/setup-graalvm@v1
         with:
-          version: '21.0.0' # Adjust for your GraalVM version
           java-version: '21'
 
       - name: Cache Gradle packages
